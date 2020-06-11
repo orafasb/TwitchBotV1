@@ -46,13 +46,13 @@ client.on("chat", (channel, _, message, self) => {
   if (message === "!setup") {
     client.say(
       channel,
-      "👾 I5 9400 F, GTX 1060 3GB Gygabite Placa Mae Asus TUF B360M, 16GB Hyper X ddr4 ‍"
+      "👾 Digite usua msg aqui ‍"
     );
   }
 });
 
 /**
- * Dado
+ * Disputa de dados.
  **/
 
 client.on("chat", (channel, user, message, self) => {
@@ -116,13 +116,13 @@ function rand({ min = 1, max = 6 }) {
   Math.floor(choice);
 
   if (Math.floor(choice) == 1) {
-    return "👾 Galera fiquem a vontade, qualquer ajuda sobre o código é sempre bem vinda! ";
+    return "👾 Digite sua msg aqui ";
   } else if (Math.floor(choice) == 2) {
-    return "👾 Quer desafiar alguem no chat? Digite !dado e descubra quem é o campeão!";
+    return "👾  Digite sua msg aqui 2";
   } else if (Math.floor(choice) == 3) {
-    return "👾 Use o !comandos para listar todos os comandos disponíveis";
+    return "👾  Digite sua msg aqui 3";
   } else {
-    return "👾 Espero que estejam curtindo e que eu possa inspirar quem está por ai! ";
+    return "👾  Digite sua msg aqui 4 ";
   }
 }
 
