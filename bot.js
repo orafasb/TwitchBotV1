@@ -3,7 +3,7 @@
  **/
 
 var tmi = require("tmi.js");
-var channel = "orafasb";
+var channel = "YourChanel";
 
 var config = {
   options: {
@@ -14,8 +14,8 @@ var config = {
     reconnect: true,
   },
   identity: {
-    username: "orafasb",
-    password: "oauth:zhqug23257j4uzu58hze2wpgg5qd4a",
+    username: "YourChannel",
+    password: "Password",
   },
   channels: [channel],
 };
