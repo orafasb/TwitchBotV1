@@ -79,7 +79,7 @@ function rand({ min = 1, max = 6 }) {
   if (Math.floor(choice) == 1) {
     return "Galera fiquem a vontade, qualquer ajuda sobre o código é sempre bem vinda! ";
   } else if (Math.floor(choice) == 2) {
-    return "Você já conhece meu canal no youtube? https://www.youtube.com/c/orafasb ";
+    return "Você já conhece meu canal no youtube?  ";
   } else if (Math.floor(choice) == 3) {
     return "Use o !comandos para saber mais.";
   } else {
