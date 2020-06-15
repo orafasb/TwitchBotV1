@@ -1,0 +1,17 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "botTwitch",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orafasb",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "tmi": "^2.0.0",
+    "tmi.js": "^1.5.0"
+  }
+}
