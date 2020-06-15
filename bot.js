@@ -25,7 +25,6 @@ client.connect();
 
 //ClientConect
 client.on("connected", (address, port) => {
-  let port = process.env.PORT || 8080;
   client.action(channel, "The bot has connected on " + address + ":" + port);
 });
 
