@@ -23,6 +23,11 @@ let chalengeList = [];
 let client = new tmi.client(config);
 client.connect();
 
+let port = process.env.PORT || 8080;
+let server = app.listen(port, function () {
+  console.log("app running on port 8080");
+});
+
 //ClientConect
 client.on("connected", (address, port) => {
   client.action(channel, "The bot has connected on " + address + ":" + port);
