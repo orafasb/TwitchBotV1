@@ -4,23 +4,23 @@
 
 <<<<<<< HEAD
 const tmi = require('tmi.js');
-const channel = 'orafasb';
+const channel = 'name chanel;';
 =======
 const tmi = require("tmi.js");
 const channel = "Your channel";
->>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
+
 const config = {
   options: {
     debug: true,
   },
   connection: {
-<<<<<<< HEAD
+
     cluster: 'aws',
     reconnect: true,
   },
   identity: {
-    username: 'orafasb',
-    password: 'oauth:zhqug23257j4uzu58hze2wpgg5qd4a',
+    username: 'channelName',
+    password: 'authOfYourChannel',
   },
   channels: [channel],
 };
