@@ -2,13 +2,19 @@
  * Config padrao Twitch// variaveis globais
  **/
 
+<<<<<<< HEAD
 const tmi = require('tmi.js');
 const channel = 'orafasb';
+=======
+const tmi = require("tmi.js");
+const channel = "Your channel";
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
 const config = {
   options: {
     debug: true,
   },
   connection: {
+<<<<<<< HEAD
     cluster: 'aws',
     reconnect: true,
   },
@@ -19,19 +25,37 @@ const config = {
   channels: [channel],
 };
 let prefix = '!';
+=======
+    cluster: "aws",
+    reconnect: true,
+  },
+  identity: {
+    username: "Your channel",
+    password: "Pasword",
+  },
+  channels: [channel],
+};
+let prefix = "!";
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
 let chalengeList = [];
-let client = new tmi.client(config);
+let client = new tmi.client(config);``
 client.connect();
 
 //ClientConect
+<<<<<<< HEAD
 client.on('connected', (address, port) => {
   client.action(channel, 'The bot has connected on ' + address + ':' + port);
+=======
+client.on("connected", (address, port) => {
+  client.action(channel, "The bot has connected on " + address + ":" + port);
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
 });
 
 /**
  * interacoes no chat
  **/
 
+<<<<<<< HEAD
 client.on('chat', (channel, user, message, self) => {
   if (self) return;
   if (message.startsWith(prefix)) {
@@ -62,6 +86,38 @@ client.on('chat', (channel, user, message, self) => {
         client.say(
           channel,
           '👾  r4fasbA1 r4fasbA1 r4fasbA1 r4fasbA1 r4fasbA1 r4fasbA1'
+=======
+client.on("chat", (channel, user, message, self) => {
+  if (self) return;
+  if (message.startsWith(prefix)) {
+    let comando = message.toLowerCase().split(" ")[0].slice(1);
+    switch (comando) {
+      case "comandos":
+        client.say(
+          channel,
+          ` 👾 Olá ${user["display-name"]}, os comandos são 👉🏻 !desafio, !ping, !dado, !setup e !orafasb`
+        );
+        break;
+      case "setup":
+        client.say(
+          channel,
+          "👾 Digite aqui sua msg "
+        );
+        break;
+      case "ping":
+        client.say(channel, ` 👾 Pong...`);
+        break;
+      case "desafio":
+        client.say(
+          channel,
+          `👾 Digite aqui sua msg `
+        );
+        break;
+      case "orafasb":
+        client.say(
+          channel,
+          "👾  Digite aqui sua msg "
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
         );
     }
   }
@@ -71,11 +127,19 @@ client.on('chat', (channel, user, message, self) => {
  * Disputa de Dado.
  **/
 
+<<<<<<< HEAD
 client.on('chat', (channel, user, message, self) => {
   if (self) return;
   if (message.startsWith('!dado')) {
     let chalenge = {
       nome: user['display-name'],
+=======
+client.on("chat", (channel, user, message, self) => {
+  if (self) return;
+  if (message.startsWith("!dado")) {
+    let chalenge = {
+      nome: user["display-name"],
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
       valor: 0,
     };
 
@@ -83,7 +147,11 @@ client.on('chat', (channel, user, message, self) => {
       if (chalengeList[0].nome == chalenge.nome) {
         client.say(
           channel,
+<<<<<<< HEAD
           `${user['display-name']}👾 Aguarde até que outro jogador lance os dados...👉🏻`
+=======
+          `${user["display-name"]}👾 Aguarde até que outro jogador lance os dados...👉🏻`
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
         );
         return;
       }
@@ -92,6 +160,7 @@ client.on('chat', (channel, user, message, self) => {
     chalenge.valor = dado();
 
     client.say(channel, ` ${chalenge.nome} tirou ${chalenge.valor}`);
+<<<<<<< HEAD
     // console.log(chalenge);
 
     chalengeList.push(chalenge);
@@ -102,6 +171,18 @@ client.on('chat', (channel, user, message, self) => {
       let vencedor = {
         nome: '',
         valor: '',
+=======
+    console.log(chalenge);
+
+    chalengeList.push(chalenge);
+
+    console.log(chalengeList.length);
+    if (chalengeList.length >= 2) {
+      console.log(chalengeList);
+      let vencedor = {
+        nome: "",
+        valor: "",
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
       };
       let empate = false;
 
@@ -141,11 +222,16 @@ function dado(min = 1, max = 7) {
  * Menssagens intervaladas
  **/
 
+<<<<<<< HEAD
 function randmsg({ min = 1, max = 4 }) {
+=======
+function rand({ min = 1, max = 4 }) {
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
   const choice = Math.random() * (max - min) + min;
   Math.floor(choice);
 
   if (Math.floor(choice) == 1) {
+<<<<<<< HEAD
     return '👾 Galera fiquem a vontade, qualquer ajuda sobre o código é sempre bem vinda! ';
   } else if (Math.floor(choice) == 2) {
     return '👾 Quer desafiar alguem no chat? Digite !dado e descubra quem é o campeão!';
@@ -159,4 +245,18 @@ function randmsg({ min = 1, max = 4 }) {
 
 let msgInterval = setInterval(() => {
   client.say(channel, randmsg({}));
+=======
+    return "👾 Digite aqui sua msg 1";
+  } else if (Math.floor(choice) == 2) {
+    return "👾 Digite aqui sua msg 2";
+  } else if (Math.floor(choice) == 3) {
+    return "👾 Digite aqui sua msg 3";
+  } else {
+    return "👾 Digite aqui sua msg  4 ";
+  }
+}
+
+let msgInterval = setInterval(() => {
+  client.say(channel, rand({}));
+>>>>>>> b04f8db7f1ae985e22792533c64513802938ca9f
 }, 120000);
